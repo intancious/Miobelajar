@@ -3,7 +3,7 @@
         <div class="card-header">Create Siswa</div>
         <div class="card-body">
             <?php
-            if (validation_errors() != false) {
+            if (validation_errors() != false) { //form validation
             ?>
                 <div class="alert alert-danger" role="alert">
                     <?php echo validation_errors(); ?>
@@ -12,9 +12,11 @@
             }
             ?>
             <form method="post" action="<?php echo base_url(); ?>siswa/save">
+                <!--menggunakan method post, dan entriian akan diproses di controller siswa function save -->
                 <div class="form-group">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama">
+                    <!--inputan form menggunakan name="nama"-->
                 </div>
 
                 <div class="form-group">
